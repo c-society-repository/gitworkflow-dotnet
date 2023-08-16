@@ -3,10 +3,7 @@
 name: Build Steps
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
 
 # Permission can be added at job level or workflow level    
 permissions:

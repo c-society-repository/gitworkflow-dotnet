@@ -5,11 +5,6 @@ name: Build Steps
 on:
   workflow_call:
 
-# Permission can be added at job level or workflow level    
-permissions:
-      id-token: write
-      contents: read
-
 env:
   AWS_REGION : us-east-1
   ECR_REPOSITORY: csocietyrepository

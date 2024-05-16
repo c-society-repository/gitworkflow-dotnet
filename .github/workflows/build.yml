@@ -31,6 +31,17 @@ jobs:
     - name: Test
       run: dotnet test /p:CollectCoverage=true /p:Threshold=10 /p:ThresholdStat=average -p:CoverletOutput=TestResults/ -p:CoverletOutputFormat=opencover --no-restore --verbosity normal 
 
+    - name: Create Test Coverage Badge
+      uses: simon-k/dotnet-code-coverage-badge@v1.0.0
+      id: create_coverage_badge
+      with:
+        label: Unit Test Coverage
+        color: brightgreen
+        path: C.SocietyApi.Tests/TestResults/coverage.opencover.xml
+        gist-filename: code-coverage.yml
+        gist-id: 59a4ea4011e1e9c3cc98bb08bfc5e1cc
+        gist-auth-token: ${{ secrets.GIST_AUTH_TOKEN }}     
+    
   publish:
     needs: build
     name: Publish

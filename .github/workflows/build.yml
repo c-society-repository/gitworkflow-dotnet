@@ -29,7 +29,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test /p:CollectCoverage=true /p:Threshold=10 /p:ThresholdStat=average -p:CoverletOutput=TestResults/ -p:CoverletOutputFormat=opencover --no-restore --verbosity normal 
+      run: dotnet test /p:CollectCoverage=true /p:Threshold=10 /p:ThresholdStat=average -p:CoverletOutput=TestResults/ -p:CoverletOutputFormat=opencover --no-restore --verbosity normal  tests/C.SocietyApi.Tests/ 
 
     - name: Create Test Coverage Badge
       uses: simon-k/dotnet-code-coverage-badge@v1.0.0

@@ -37,7 +37,7 @@ jobs:
       with:
         label: Unit Test Coverage
         color: brightgreen
-        path: TestResults/coverage.opencover.xml
+        path: tests/C.SocietyApi.Tests/TestResults/coverage.opencover.xml
         gist-filename: code-coverage.yml
         gist-id: 59a4ea4011e1e9c3cc98bb08bfc5e1cc
         gist-auth-token: ${{ secrets.GIST_AUTH_TOKEN }}     
